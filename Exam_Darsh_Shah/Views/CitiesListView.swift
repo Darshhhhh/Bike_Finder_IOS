@@ -13,7 +13,6 @@ struct CitiesListView: View {
     @State private var searchText = ""
     private let controller = CitiesController()
 
-    // Compute filtered results on the fly
     private var filteredNetworks: [CityBikeNetwork] {
         guard !searchText.isEmpty else { return networks }
         return networks.filter {

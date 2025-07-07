@@ -8,7 +8,7 @@
 
 import CoreData
 
-@objc(FavoriteLocation)
+@objc(FavoriteLocation) // this is core data backed obj
 public class FavoriteLocation: NSManagedObject {}
 
 extension FavoriteLocation {

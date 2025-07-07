@@ -8,7 +8,7 @@
 import Foundation
 
 extension CityBikeNetwork {
-    // Create a “fake” data from a saved FavoriteLocation
+    // Used in Favriout list too for navigation.
     init(favorite: FavoriteLocation) {
         self.id   = favorite.id ?? UUID().uuidString
         self.name = favorite.city ?? ""
@@ -18,7 +18,6 @@ extension CityBikeNetwork {
             latitude:  favorite.latitude,
             longitude: favorite.longitude
         )
-        // split your comma-joined company string back into an array
         if let comp = favorite.company {
             self.company = comp.split(separator: ",").map { $0.trimmingCharacters(in: .whitespaces) }
         } else {
